@@ -18,6 +18,7 @@ function PlaceholderDocument() {
       className="flex flex-col items-center w-64 h-80 rounded-xl bg-indigo-100 text-slate-950 hover:bg-indigo-200 hover:text-slate-700 shadow-md shadow-white/25"
     >
       <PlusCircleIcon className="h-16 w-16" />
+      {/* Deploy */}
       <p>Add a document</p>
     </Button>
   );
