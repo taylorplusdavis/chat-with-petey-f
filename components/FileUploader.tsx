@@ -22,15 +22,18 @@ function FileUploader() {
     }
   }, [fileId, router]);
 
-  const onDrop = useCallback(async (acceptedFiles: File[]) => {
-    const file = acceptedFiles[0];
+  const onDrop = useCallback(
+    async (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0];
 
-    if (file) {
-      await handleUpload(file);
-    } else {
-      // do nothing
-    }
-  }, []);
+      if (file) {
+        await handleUpload(file);
+      } else {
+        // do nothing
+      }
+    },
+    [handleUpload]
+  );
 
   const statusIcons: {
     [key in StatusText]: JSX.Element;
