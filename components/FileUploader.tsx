@@ -78,7 +78,12 @@ function FileUploader() {
             {progress} %
           </div>
           {/* Render Status Icon */}
-          {statusIcons[status!]}
+
+          {
+            // @ts-ignore
+            statusIcons[status!]
+          }
+
           <p>{status.toString()}</p>
         </div>
       )}
