@@ -4,10 +4,10 @@ import { ClerkLoaded } from "@clerk/nextjs";
 function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkLoaded>
-      <div className="bg-slate-900 text-white">
+      <div className="bg-slate-900 text-white max-h-screen h-screen overflow-hidden flex flex-col">
         {/* Header */}
         <Header />
-        <div>{children}</div>
+        <div className="h-full">{children}</div>
       </div>
     </ClerkLoaded>
   );
